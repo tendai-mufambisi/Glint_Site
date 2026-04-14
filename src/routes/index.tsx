@@ -1,26 +1,37 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { GlintNav } from "@/components/GlintNav";
+import { GlintHero } from "@/components/GlintHero";
+import { GlintPlatforms } from "@/components/GlintPlatforms";
+import { GlintProblem } from "@/components/GlintProblem";
+import { GlintHowItWorks } from "@/components/GlintHowItWorks";
+import { GlintDemo } from "@/components/GlintDemo";
+import { GlintCTA } from "@/components/GlintCTA";
+import { GlintFooter } from "@/components/GlintFooter";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "GLINT — Your AI Privacy Guardian | Stop Secret Leaks" },
+      { name: "description", content: "Glint detects passwords, API keys, and sensitive data in your AI prompts before they're sent. Free Chrome extension for 40+ AI platforms." },
+      { property: "og:title", content: "GLINT — Your AI Privacy Guardian" },
+      { property: "og:description", content: "Stop accidentally leaking secrets to ChatGPT, Claude, and 40+ AI tools. Free browser extension." },
+      { property: "og:type", content: "website" },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="/placeholder.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <GlintNav />
+      <GlintHero />
+      <GlintPlatforms />
+      <GlintProblem />
+      <GlintHowItWorks />
+      <GlintDemo />
+      <GlintCTA />
+      <GlintFooter />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
