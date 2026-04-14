@@ -51,9 +51,9 @@ export function GlintHero() {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
         >
-          One accidental paste of an API key or password into ChatGPT can compromise
-          your entire infrastructure. <span className="font-semibold text-danger">Forever.</span>{" "}
-          There is no "undo" button for AI memory.
+          One accidental API key or password pasted into ChatGPT? It's in
+          their training data <span className="font-semibold text-danger">forever.</span>{" "}
+          You can’t 'unsend' it.
         </motion.p>
 
         {/* CTA */}
