@@ -1105,7 +1105,7 @@
                 <a href="#features">Features</a>
                 <a href="#demo">Demo</a>
             </div>
-            <button class="btn-hero-outline">Add to Chrome — Free</button>
+            <button class="btn-hero-outline" onclick="openWaitlist()">Join Waitlist</button>
         </div>
     </nav>
 
@@ -1133,13 +1133,13 @@
             </p>
             
             <div class="hero-cta">
-                <button class="btn-hero">
-                    PROTECT MY BROWSER NOW
+                <button class="btn-hero" onclick="openWaitlist()">
+                    JOIN THE WAITLIST
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </button>
-                <p class="hero-cta-subtext">Free • Works on 40+ AI platforms • No data leaves your browser</p>
+                <p class="hero-cta-subtext">🚀 Coming Soon • Works on 40+ AI platforms • No data leaves your browser</p>
             </div>
         </div>
     </section>
@@ -1208,12 +1208,15 @@
         </div>
         
         <div class="cta-content">
+            <div style="display: inline-block; margin-bottom: 1.5rem; padding: 0.5rem 1rem; background-color: oklch(0.63 0.25 25 / 0.1); border: 1px solid oklch(0.63 0.25 25 / 0.3); border-radius: 999px; font-size: 0.875rem; color: var(--danger); font-weight: 600;">
+                🚀 COMING SOON
+            </div>
             <h2 class="text-gradient-silver">Ready to prompt<br/>with confidence?</h2>
-            <p>Join thousands of developers and professionals who trust Glint to keep their secrets safe.</p>
+            <p>Be the first to know when Glint launches. Join thousands of developers and professionals waiting to protect their secrets.</p>
             
             <div class="cta-button-wrapper">
-                <button class="btn-hero">
-                    Get GLINT for Free
+                <button class="btn-hero" onclick="openWaitlist()">
+                    Join the Waitlist
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -1248,6 +1251,14 @@
                 splashScreen.style.pointerEvents = 'none';
             }, 3400);
         });
+
+        // Waitlist form handler
+        function openWaitlist() {
+            // Replace 'YOUR_FORM_ID' with your actual Google Form ID
+            // To get your form URL, create a form at https://forms.google.com
+            // Add Email and Phone Number fields, then copy the form URL
+            window.open('https://forms.gle/8E2DTLV99NUyKB9C9', '_blank');
+        }
 
         // Platforms data
         const platforms = [
