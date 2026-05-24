@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Glint</title>
+  <meta name="description" content="Glint processes everything locally in your browser. We do not collect, transmit, store, or share any of your data.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --background: oklch(0.08 0.005 260);
+      --foreground: oklch(0.85 0.01 260);
+      --card: oklch(0.12 0.008 260);
+      --border: oklch(0.22 0.01 260);
+      --muted-foreground: oklch(0.55 0.01 260);
+      --danger: oklch(0.63 0.25 25);
+      --silver: oklch(0.82 0.01 260);
+      --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--foreground);
+      font-family: var(--font-display);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: oklch(0.08 0.005 260 / 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid oklch(0.22 0.01 260 / 0.5);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-inner {
+      max-width: 48rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .nav-logo span {
+      font-size: 1.125rem;
+      font-weight: bold;
+      letter-spacing: 0.15em;
+      color: var(--foreground);
+    }
+
+    .back-link {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover { color: var(--foreground); }
+
+    main {
+      max-width: 48rem;
+      margin: 3rem auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, oklch(0.95 0.005 260), oklch(0.65 0.01 260));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      font-family: var(--font-mono);
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--silver);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: var(--muted-foreground);
+      font-size: 0.9375rem;
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 0.75rem;
+    }
+
+    ul li {
+      color: var(--muted-foreground);
+      font-size: 0.9375rem;
+      padding: 0.375rem 0 0.375rem 1.25rem;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--danger);
+    }
+
+    strong { color: var(--foreground); }
+
+    a {
+      color: oklch(0.72 0.19 155);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .summary-box {
+      background: oklch(0.63 0.25 25 / 0.08);
+      border: 1px solid oklch(0.63 0.25 25 / 0.25);
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .summary-box p {
+      margin-bottom: 0;
+      color: oklch(0.8 0.05 25);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 0.75rem;
+      color: var(--muted-foreground);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="shield_icon.png" alt="GLINT" style="width: auto; height: 1.75rem;">
+        <span>GLINT</span>
+      </a>
+      <a href="/" class="back-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
+        </svg>
+        Back to home
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: 24 May 2026</p>
+
+    <div class="summary-box">
+      <p>Glint processes everything locally in your browser. We do not collect, transmit, store, or share any of your data. There is no server, no analytics, no telemetry, no account.</p>
+    </div>
+
+    <h2>What Glint does</h2>
+    <p>Glint is a Chrome extension that scans text you type or paste into supported AI chat interfaces (ChatGPT, Claude, Gemini, and others listed in the extension manifest). It detects patterns that match sensitive data — API keys, passwords, access tokens, private keys, email addresses, and similar credentials — and warns you before that text is sent.</p>
+
+    <h2>What data Glint accesses</h2>
+    <p>Glint reads the contents of input fields on supported LLM websites only when you are typing or attempting to send a message. This reading happens entirely within your browser. The text never leaves your device.</p>
+
+    <h2>What Glint does not do</h2>
+    <ul>
+      <li>Glint does not send any data to any server, including servers operated by Digits Digital.</li>
+      <li>Glint does not store your prompts, redacted output, or detection history.</li>
+      <li>Glint does not use cookies, local storage, or any tracking technology.</li>
+      <li>Glint does not share data with third parties.</li>
+    </ul>
+
+    <h2>Permissions explained</h2>
+    <p><strong>activeTab</strong>: Required so Glint can read and modify the prompt input field on the LLM website you are currently using.</p>
+    <p><strong>Host permissions</strong> (specific LLM domains listed in the manifest): Required so Glint runs only on those AI chat interfaces and nowhere else on the web.</p>
+
+    <h2>Open source</h2>
+    <p>Glint's source code is publicly available on GitHub. You can verify these privacy claims yourself.</p>
+
+    <h2>Contact</h2>
+    <p>For questions, email <a href="mailto:mufambisitendaiblessed@gmail.com">mufambisitendaiblessed@gmail.com</a>.</p>
+
+    <p style="margin-top: 2.5rem; font-size: 0.875rem;">Glint is built by <a href="https://digitsdigital.co.zw">Digits Digital</a>, Harare, Zimbabwe.</p>
+  </main>
+
+  <footer>
+    <p class="footer-text">© <span id="year"></span> GLINT. Built for the Internet Economy.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
