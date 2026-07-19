@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLINT — Your AI Privacy Guardian | Stop Secret Leaks</title>
-    <meta name="description" content="Glint detects passwords, API keys, and sensitive data in your AI prompts before they're sent. Free Chrome extension for 40+ AI platforms.">
+    <meta name="description" content="Glint detects passwords, API keys, and sensitive data in your AI prompts before they're sent. Free Chrome extension for 40+ AI platforms. Available now on the Chrome Web Store.">
     <meta property="og:title" content="GLINT — Your AI Privacy Guardian">
-    <meta property="og:description" content="Stop accidentally leaking secrets to ChatGPT, Claude, and 40+ AI tools. Free browser extension.">
+    <meta property="og:description" content="Stop accidentally leaking secrets to ChatGPT, Claude, and 40+ AI tools. Free browser extension, available now on the Chrome Web Store.">
     <meta property="og:type" content="website">
     <style>
         * {
@@ -41,6 +41,7 @@
             --safe-foreground: oklch(0.15 0.02 155);
             --silver: oklch(0.82 0.01 260);
             --silver-dim: oklch(0.55 0.01 260);
+            --orange: oklch(0.75 0.17 55);
             
             /* Fonts */
             --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -1057,6 +1058,41 @@
             color: var(--muted-foreground);
         }
 
+        .footer-powered-by {
+            width: 100%;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-powered-by p {
+            font-size: 0.8125rem;
+            color: var(--muted-foreground);
+        }
+
+        .footer-powered-by p a {
+            color: var(--orange);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .footer-powered-by p a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-company-link {
+            display: inline-block;
+            margin-top: 0.375rem;
+            font-size: 0.75rem;
+            color: var(--orange);
+            text-decoration: none;
+        }
+
+        .footer-company-link:hover {
+            text-decoration: underline;
+        }
+
         /* Icon SVG defaults */
         svg {
             display: inline-block;
@@ -1105,7 +1141,7 @@
                 <a href="#features">Features</a>
                 <a href="#demo">Demo</a>
             </div>
-            <button class="btn-hero-outline" onclick="openWaitlist()">Join Waitlist</button>
+            <button class="btn-hero-outline" onclick="installExtension()">Add to Chrome</button>
         </div>
     </nav>
 
@@ -1133,13 +1169,13 @@
             </p>
             
             <div class="hero-cta">
-                <button class="btn-hero" onclick="openWaitlist()">
-                    JOIN THE WAITLIST
+                <button class="btn-hero" onclick="installExtension()">
+                    ADD TO CHROME — IT'S FREE
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </button>
-                <p class="hero-cta-subtext">🚀 Coming Soon • Works on 40+ AI platforms • No data leaves your browser</p>
+                <p class="hero-cta-subtext">✅ Live on the Chrome Web Store • Works on 40+ AI platforms • No data leaves your browser</p>
             </div>
         </div>
     </section>
@@ -1208,15 +1244,15 @@
         </div>
         
         <div class="cta-content">
-            <div style="display: inline-block; margin-bottom: 1.5rem; padding: 0.5rem 1rem; background-color: oklch(0.63 0.25 25 / 0.1); border: 1px solid oklch(0.63 0.25 25 / 0.3); border-radius: 999px; font-size: 0.875rem; color: var(--danger); font-weight: 600;">
-                🚀 COMING SOON
+            <div style="display: inline-block; margin-bottom: 1.5rem; padding: 0.5rem 1rem; background-color: oklch(0.72 0.19 155 / 0.1); border: 1px solid oklch(0.72 0.19 155 / 0.3); border-radius: 999px; font-size: 0.875rem; color: var(--safe); font-weight: 600;">
+                ✅ NOW LIVE ON THE CHROME WEB STORE
             </div>
             <h2 class="text-gradient-silver">Ready to prompt<br/>with confidence?</h2>
-            <p>Be the first to know when Glint launches. Join thousands of developers and professionals waiting to protect their secrets.</p>
-            
+            <p>Join thousands of developers and professionals already protecting their secrets with Glint. Free to install, takes seconds.</p>
+
             <div class="cta-button-wrapper">
-                <button class="btn-hero" onclick="openWaitlist()">
-                    Join the Waitlist
+                <button class="btn-hero" onclick="installExtension()">
+                    Add to Chrome — It's Free
                     <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -1241,6 +1277,10 @@
             </div>
             <p class="footer-text">© <span id="year"></span> GLINT. Built for the Internet Economy. &nbsp;·&nbsp; <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a></p>
         </div>
+        <div class="footer-powered-by">
+            <p>Powered By <a href="https://digitsdigital.co.zw" target="_blank" rel="noopener noreferrer">Digits Digital</a></p>
+            <a class="footer-company-link" href="https://digitsdigital.co.zw" target="_blank" rel="noopener noreferrer">digitsdigital.co.zw</a>
+        </div>
     </footer>
 
     <script>
@@ -1252,12 +1292,9 @@
             }, 3400);
         });
 
-        // Waitlist form handler
-        function openWaitlist() {
-            // Replace 'YOUR_FORM_ID' with your actual Google Form ID
-            // To get your form URL, create a form at https://forms.google.com
-            // Add Email and Phone Number fields, then copy the form URL
-            window.open('https://forms.gle/8E2DTLV99NUyKB9C9', '_blank');
+        // Chrome Web Store install handler
+        function installExtension() {
+            window.open('https://chromewebstore.google.com/detail/glint/okonghgghodkpfgghkanojbchkjigccc', '_blank');
         }
 
         // Platforms data
